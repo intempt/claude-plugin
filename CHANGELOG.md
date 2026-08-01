@@ -1,6 +1,20 @@
 # Changelog
 
-## 2026-08-01
+## 2026-08-01 (v0.2.0)
+
+- **Added:** 8 new skills -- `intempt` (router), `registry`, `instrument`, `crm`,
+  `analyze`, `design`, `market`, `sell` -- covering the full 202-entry command
+  registry plus native instrumentation. Organized around Intempt's four sold
+  products (Analytics, Design, Marketing, Sales) rather than internal registry
+  domains, after an adversarial review found the domain-oriented shape produced
+  real same-word collisions a developer would actually hit (e.g. "draft a follow-up
+  email" and "generate a hero image" each routing to two different skills, "event"
+  meaning two unrelated things depending on which skill). `crm` (accounts/users/
+  deals/segments) is a cross-cutting exception -- entity lookup is used by all four
+  products, not owned by Sales.
+- Bumped plugin version to 0.2.0.
+
+## 2026-08-01 (v0.1.0)
 
 - **Added:** initial release. Marketplace manifest, `intempt` plugin (registers the MCP server as `npx -y @intempt/mcp-server@^1.0.0`, no bundled binary since the packages publish to public npm), and the bundled `intempt:setup` skill (installs the CLI via npm if missing, logs in, resolves org/project non-interactively when ambiguous, verifies both surfaces).
 - **Fixed** (pre-merge, adversarial review): the setup skill's restart check used `claude mcp list`, a separate process reading on-disk config that can't reflect whether *this* session's tools are actually live -- replaced with a direct tool-reachability check.
