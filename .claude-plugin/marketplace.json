@@ -1,0 +1,16 @@
+{
+  "name": "intempt-plugins",
+  "owner": {
+    "name": "Intempt"
+  },
+  "metadata": {
+    "description": "Official Intempt plugins for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "intempt",
+      "source": "./intempt",
+      "description": "Intempt CLI + MCP server -- analytics instrumentation and platform operations from Claude Code"
+    }
+  ]
+}
