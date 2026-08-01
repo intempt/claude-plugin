@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "intempt": {
+      "command": "npx",
+      "args": ["-y", "@intempt/mcp-server@^1.0.0"]
+    }
+  }
+}
